@@ -2,11 +2,12 @@
 <hr />
 <div class="row">
   <div class="col s12 m6">
-    <ul id="idgames-list">
+    <ul id="games-list">
       <% @games.each do |game|  %>
         <li
           class="game-item"
           data-id=<%= game.id %>
+          data-name="<%= game.name %>"
         >
           <%= game.name %> - <%= game.description %>
         </li>
@@ -14,7 +15,7 @@
     </ul>
   </div>
   <div id="characters-list" class="row">
-    <h3 id="game">Characters in Game</h3>
+    <h4 id="game">Characters in Game</h4>
     <ul id="characters">
     </ul>
   </div>
