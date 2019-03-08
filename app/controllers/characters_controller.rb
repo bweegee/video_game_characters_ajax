@@ -31,11 +31,12 @@ class CharactersController < ApplicationController
     @character.destroy
     render json: {message: 'removed' }, status: :ok
   end
+
   private
     def set_game
       @game = Game.find(params[:game_id])
     end
-    
+
     def set_character
       @character = Character.find(params[:id])
     end

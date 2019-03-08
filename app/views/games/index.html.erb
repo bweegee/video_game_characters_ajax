@@ -2,6 +2,7 @@
 <hr />
 <div class="row">
   <div class="col s12 m6">
+    <button id="toggle" class="btn">Show Form</button>
     <ul id="games-list">
       <% @games.each do |game|  %>
         <li
@@ -14,7 +15,7 @@
     <% end %>
     </ul>
   </div>
-  <div id="characters-list" class="row">
+  <div id="characters-list" class="col s12 m6">
     <h4 id="game">Characters in Game</h4>
     <ul id="characters">
     </ul>

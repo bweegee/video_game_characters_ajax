@@ -1,11 +1,16 @@
 class GamesController < ApplicationController
-  before_action :set_game, except: [:index, :create]
+  before_action :set_game, except: [:index, :create, :form]
 
   def index
     @games = Game.all
   end
 
   def show
+  end
+
+  def form
+    @game = Game.new
+    render partial: "form"
   end
 
   def create
@@ -27,7 +32,7 @@ class GamesController < ApplicationController
 
   def destroy
     @game.destroy
-    render json: { message: 'removed' }, status: :ok
+    render json: { message: "Removed" }, status: :ok
   end
 
   private
